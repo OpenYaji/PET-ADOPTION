@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Adoption Center - Login</title>
+    <link rel="stylesheet" href="LoginD.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Pet Adoption Center</h1>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p id="error-message" style="color: red;"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Pet Adoption System 2nd Yr SBIT-2H 2024
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check for the temporary credentials
+            if (username === "Try" && password === "123") {
+                // Show a success message dialog
+                alert("Login successful!");
+
+                // Redirect to Pet.html after a short delay
+                setTimeout(function() {
+                    window.location.href = "home.html";
+                }, 500);
+            } else {
+                // Display an error message for incorrect credentials
+                document.getElementById("error-message").textContent = "Invalid username or password.";
+            }
+        });
+    </script>
+</body>
+</html>

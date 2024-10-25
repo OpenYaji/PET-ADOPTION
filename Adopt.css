@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    background-image: linear-gradient(to right, #f06b6b, #f0966b); /* Gradient background */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #468499; /* Navy blue header */
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333; /* Dark gray headings */
+    margin-bottom: 20px;
+}
+
+.adoption-process {
+    padding: 20px;
+    background-color: #fff; /* White background for content sections */
+    border: 1px solid #ccc; /* Border around content sections */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}
+
+.adoption-process ol {
+    list-style: none;
+    counter-reset: list-items;
+}
+
+.adoption-process li {
+    margin-bottom: 15px;
+}
+
+.adoption-process li::before {
+    content: counter(list-items) ". ";
+    counter-increment: list-items;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.adoption-requirements {
+    margin-top: 20px;
+}
+
+.adoption-requirements ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+

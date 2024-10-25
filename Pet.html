@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Adoption System</title>
+    <link rel="stylesheet" href="Pets.css">
+    <header>
+        <a href="home.html">&laquo; Back to Homepage</a>
+    </header>
+</head>
+<body>
+    <h1>Available Pets for Adoption</h1>
+
+    <section class="pet-listing">
+        <div class="pet-card">
+            <h2>Manok ni Commando</h2>
+            <img src="buddy.jpeg" alt="Buddy the Beagle">
+            <p>Breed: Manok na Pula </p>
+            <p>Age: 2 years old</p>
+            <p>Sex: No Experience</p>
+            <p>Description: Friendly, playful, and loves to cuddle. Good with children and other pets.</p>
+            <button>Learn More</button>
+            <button class="adopt-button">Adopt</button>
+        </div>
+
+        <div class="pet-card">
+            <h2>Aso na Rapper</h2>
+            <img src="commando.jpeg" alt="Random Pet">
+            <p>Breed:Tiger Commando</p>
+            <p>Age: 23 yrs old</p>
+            <p>Sex: Sige</p>
+            <p>Description: Matapang, mabilis, at malakas. Isang bihirang lahi ng aso na may kakayahang mag-rapping at sumayaw. Mahalin at alagaan siya!</p>
+            <button class="learn-more-button">Learn More</button>
+            <button class="adopt-button">Adopt</button>
+        </div>
+    </section>
+
+    <section class="adoption-form">
+        <h2>Adoption Application</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy;Pet Adoption System 2nd Yr SBIT-2H 2024
+    </footer>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="videoPlayer" controls></video>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal and video elements
+        var modal = document.getElementById("videoModal");
+        var videoPlayer = document.getElementById("videoPlayer");
+
+        // Get the button that opens the modal
+        var learnMoreButton = document.querySelector(".learn-more-button");
+
+        // When the user clicks the button, open the modal
+        learnMoreButton.onclick = function() {
+            modal.style.display = "block";
+            // Set the video source to the desired URL
+            videoPlayer.src = "tiger.mp4"; // Replace with the actual video URL
+            videoPlayer.play();
+        }
+
+        // When the user clicks on the close button or anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                videoPlayer.pause();
+            }
+        }
+    </script>
+</body>
+</html>

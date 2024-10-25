@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+header {
+  background-color: #333; /* Dark gray header */
+  color: #fff; /* White text */
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* White text */
+}
+
+nav a:hover {
+  color: #f0f0f0; /* Hover effect */
+}
+
+main {
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333; /* Dark gray headings */
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #f5f5f5; /* Light gray background for hero section */
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+.about-us, .pet-of-the-week, .donate, .contact-us {
+  padding: 20px;
+  background-color: #fff; /* White background for content sections */
+  border: 1px solid #ccc; /* Border around content sections */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.pet-of-the-week img {
+  max-width: 300px;
+}
+
+.donate {
+  background-color: #ff9900; /* Orange background for donate section */
+  color: #fff; /* White text */
+}
+
+.donate a {
+  color: #fff; /* White text for donate link */
+}
+
+.donate a:hover {
+  color: #f0f0f0; /* Hover effect */
+}
